@@ -7,14 +7,12 @@ import SwiperCore from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import TutorCard from "@/components/tutor-card/TutorCard";
 
 const Tutorial = () => {
   const [swiper, setSwiper] = useState<SwiperCore | null>(null);
   const [isEnd, setIsEnd] = useState(false);
-  const router = useRouter();
 
   const handleNext = () => {
     swiper?.slideNext();
@@ -44,7 +42,7 @@ const Tutorial = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className={style.slide}>
-            <TutorCard text="You’ll get insights into current industry sentiments and a reality check about technology in a few minutes. Deal? Great!"/>
+            <TutorCard text="You'll get insights into current industry sentiments and a reality check about technology in a few minutes. Deal? Great!"/>
           </div>
         </SwiperSlide>
       </Swiper>
