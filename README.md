@@ -2,6 +2,12 @@
 
 A simple web application built with Next.js and TypeScript. It provides home page, tutorial page, multi-step form for user input and displays results in a visually appealing way.
 
+## Preview
+| Home | Tutorial | Form | Result |
+|------|--------|--------|----------|
+|![page1](./preview_home.png)|![page2](./preview_tutorial.png)|![page3](./preview_form.png)|![page4](./preview_result.png)|
+
+
 ## Getting Started
 
 To get a local copy up and running, follow these simple steps.
