@@ -1,21 +1,15 @@
 import Image from "next/image";
-import LottieAnimation from "./LottieAnimation";
 import styles from "./page.module.css";
+import Link from "next/link";
+import Header from "@/components/header/Header";
+import LottieAnimation from "@/components/lottie-animation/LottieAnimation";
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <div style={{ width: 46 }} />
-        <Image src="/logo.png" alt="Logo" width={123} height={29} />
-        <button className={styles.refresh}>
-          <Image src="/refresh.png" alt="Refresh" width={20} height={20} />
-        </button>
-      </header>
+      <Header />
       <section className={styles.section}>
-        <div className={styles.animation_container}>
-          <LottieAnimation />
-        </div>
+        <LottieAnimation />
         <div className={styles.section_texts}>
           <span>WA businesses feel confident about future growth</span>
           <span>AI cant replace creativity</span>
@@ -32,7 +26,9 @@ export default function Home() {
           <span className={styles.footer_text_highlight}>technology</span> with
           current industry opinions.
         </h2>
-        <button className={styles.footer_button}>Get a reality check</button>
+        <Link href="/tutorial" className={styles.footer_link}>
+          <button className={styles.footer_button}>Get a reality check</button>
+        </Link>
       </footer>
     </div>
   );

@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  background: #FFFFFF0D;
+  backdrop-filter: blur(120px);
+  box-shadow: 0px 4px 20px 0px #0000000D;
+  width: 46;
+  height: 46;
+  justify-content: space-between;
+  padding: 4px 8px;
+  border-radius: 200px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
