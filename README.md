@@ -5,7 +5,7 @@ A simple web application built with Next.js and TypeScript. It provides home pag
 ## Preview
 | Home | Tutorial | Form | Result |
 |------|--------|--------|----------|
-|![page1](./preview_home.png)|![page2](./preview_tutorial.png)|![page3](./preview_form.png)|![page4](./preview_result.png)|
+| <img src="./preview_home.png" alt="page1" height="180"> | <img src="./preview_tutorial.png" alt="page2" height="180"> | <img src="./preview_form.png" alt="page3" height="180"> | <img src="./preview_result.png" alt="page4" height="180"> |
 
 
 ## Getting Started
