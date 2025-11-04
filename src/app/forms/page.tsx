@@ -11,12 +11,13 @@ const Forms = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [errorMsg, setErrorMsg] = useState('');
   const router = useRouter();
 
   const handleNext = () => {
     if (step === 1 && name) {
       setStep(2);
-    } else if (step === 2 && email) {
+    } else if (step === 2 && email && !errorMsg) {
       const params = new URLSearchParams({
         name: name,
         email: email,
@@ -29,7 +30,14 @@ const Forms = () => {
     if (step === 1) {
       setName(e.target.value);
     } else if (step === 2) {
-      setEmail(e.target.value);
+      const emailValue = e.target.value;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailValue)) {
+        setErrorMsg('Please enter a valid email address.');
+      } else {
+        setErrorMsg('');
+      }
+      setEmail(emailValue);
     }
   };
 
@@ -54,24 +62,27 @@ const Forms = () => {
         </div>
       </div>
 
-      <div className={style.input_container} style={{ position: "relative" }}>
-        <input
-          type="text"
-          placeholder={step === 1 ? "First name" : "Email address"}
-          value={step === 1 ? name : email}
-          onChange={handleInputChange}
-          onKeyDown={handleKeyDown}
-          className={style.input}
-          style={{ paddingRight: "50px" }}
-        />
-        <button
-          type="button"
-          onClick={handleNext}
-          className={style.next_button}
-          style={{ opacity: (step === 1 && name || step === 2 && email) ? 1 : 0.5 }}
-        >
-          <Image className={style.next_icon} src="/back.png" alt="Next" width={16} height={16} />
-        </button>
+      <div className={style.input_container}>
+        <div style={{ position: "relative" }}>
+          <input
+            type="text"
+            placeholder={step === 1 ? "First name" : "Email address"}
+            value={step === 1 ? name : email}
+            onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
+            className={`${style.input}${errorMsg ? ` ${style.input_error}` : ""}`}
+            style={{ paddingRight: "50px" }}
+          />
+          <button
+            type="button"
+            onClick={handleNext}
+            className={style.next_button}
+            style={{ opacity: (step === 1 && name || step === 2 && email && !errorMsg) ? 1 : 0.5 }}
+            >
+            <Image className={style.next_icon} src="/back.png" alt="Next" width={16} height={16} />
+          </button>
+        </div>
+        {step === 2 && errorMsg && <p className={style.error_message}>{errorMsg}</p>}
       </div>
     </div>
   );
