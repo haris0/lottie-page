@@ -6,25 +6,19 @@ A simple web application built with Next.js and TypeScript. It provides home pag
 
 To get a local copy up and running, follow these simple steps.
 
-### Prerequisites
-
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/juicebox.git
+   git clone https://github.com/haris0/lottie-page.git
    ```
 2. Install NPM packages
    ```sh
-   npm install
+   yarn install
    ```
 3. Run the development server
    ```sh
-   npm run dev
+   yarn dev
    ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
