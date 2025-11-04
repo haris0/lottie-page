@@ -26,6 +26,7 @@
   width: 100%;
   position: absolute;
   text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  font-size: 12px;
 }
 
 .section_texts > :nth-child(even) {
