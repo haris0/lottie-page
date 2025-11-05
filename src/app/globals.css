@@ -16,14 +16,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
-  min-height: 100vh;
+  min-height: 100svh;
   align-items: center;
   justify-content: center;
 }
 
 .main {
   display: flex;
-  min-height: 100vh;
+  min-height: 100svh;
   width: 100%;
   max-width: 680px;
   flex-direction: column;
